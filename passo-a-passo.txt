@@ -1,0 +1,34 @@
+0 - instalar Nodemon + Typescript  + Ts-node
+    - npm install -g nodemon typescript ts-node
+
+1 - criação do repositório no github
+    - publico
+    - gitignore (node)
+    - readme
+
+2 - criação pasta projetos
+
+3 - dentro da pasta projetos (via CLI) clonar o projetos    
+    - git clone https://github.com/MicaelDev/nodets-canil
+    - code . (abrir o VSCode)
+
+4 - já no VSCode (via CLI)
+    - npm init -y (para criar o package.json)
+    - tsc --init (para criar o arquivo de config Typescript)
+        - dentro do tsconfig.json   
+            - descomentar "target": "es6",  (colocando o "es6")
+            - descomentar "rootDir": "./src", (colocando o "./src")
+            - descomentar "moduleResolution": "node",  
+            - descomentar  "outDir": "./dist",  (colocando o "./dist")
+
+5 - instalar os pacotes principais
+    - npm install express mustache-express dotenv 
+
+6 - instalar os types (apenas em ambiente de desenvolvimento com --save-dev)
+    - npm install --save-dev @types/express @types/mustache-express @types/node
+
+7- criar a pasta src
+    - criar dentro dela o nosso primeiro arquivo (server.ts)
+
+8 - dentro do package.json em "scripts" criar nosso script de start para o server
+        "start-dev": "nodemon -e ts,json,mustache src/server.ts"
